@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NeighbourProfileActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    android:fitsSystemWindows="true"
+    android:isScrollContainer="true"
+    tools:context=".ui.neighbour_list.NeighbourDetailActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/neighbour_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/neighbour_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:contentDescription="@string/neighbour_image"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/neighbour_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/tab_neighbour_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="35sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/neighbour_image"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/neighbour_favorite_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="28dp"
+                    android:src="@drawable/ic_star_yellow_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/neighbour_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/neighbour_image" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/neighbour_cardview"
+                android:layout_width="332dp"
+                android:layout_height="200dp"                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginRight="8dp">
+
+                <TextView
+                    android:id="@+id/cardview_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="viewStart"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="22sp"
+                    tools:text="Nom" />
+
+                <ImageView
+                        android:id="@+id/cardview_icon_location"
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="66dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/location"
+                        app:srcCompat="@drawable/icon_location"/>
+                <TextView
+                    android:id="@+id/cardview_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="66dp"
+                    android:textSize="16sp"
+                    tools:text="Localisation" />
+
+                <ImageView
+                    android:id="@+id/cardview_phone"
+                    android:layout_width="27dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/phone"
+                    app:srcCompat="@drawable/earth_icon" />
+
+
+                <TextView
+                    android:id="@+id/cardview_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="108dp"
+                    android:textSize="16sp"
+                    tools:text="Contact" />
+
+                <ImageView
+                    android:id="@+id/cardview_reseaux"
+                    android:layout_width="27dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="107dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/network"
+                    app:srcCompat="@drawable/call_icon" />
+
+                <TextView
+                    android:id="@+id/cardview_network"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="150dp"
+                    android:textSize="16sp"
+
+                    tools:text="Site Web" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/description_cardview"
+                android:layout_width="330dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/neighbour_a_propos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/A_propos"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/neighbour_details"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:textSize="13sp"
+                    tools:text="Description trop stylée" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/return_Button"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="2dp"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/Return_Button"
+        android:tint="@android:color/white"
+
+        app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Entrevoisins</string>
+    <string name="tab_neighbour_title">My neighbours</string>
+    <string name="tab_favorites_title">Favorites</string>
+    <string name="activity_new_neighbour">New neighbour</string>
+    <string name="neighbour_image" />
+    <string name="Return_Button" />
+    <string name="location" />
+    <string name="phone" />
+    <string name="network" />
+    <string name="A_propos">A propos de moi</string>
+</resources>
